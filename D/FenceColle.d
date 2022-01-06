@@ -1,0 +1,43 @@
+CHAIN
+IF WEIGHT #-3 ~Global("SanRTFColl","GLOBAL",1) ~THEN Sethle CollHint1
+@0
+==CVSan25J@1
+DO~SetGlobal("SanRTFPlot1","GLOBAL",6) SetGlobal("SanRTFColl","GLOBAL",2) ~
+==Sethle@2
+==CVSan25J@3
+==Sethle@4
+==CVSan25J@5
+==Sethle@6
+==CVSan25J@7
+==Sethle@8DO~EscapeArea()~EXIT
+
+EXTEND_BOTTOM  BmThief 0
+IF ~Global("SanRTFColl","GLOBAL",1)~THEN REPLY@9GOTO CollHint1
+END
+
+EXTEND_BOTTOM  BmThief 4
+IF ~Global("SanRTFColl","GLOBAL",1)~THEN REPLY@10GOTO CollHint1
+END
+
+APPEND  BmThief
+IF~~THEN BEGIN CollHint1
+SAY@11
+IF~AreaCheck("RTF006") ~THEN REPLY@3GOTO CollHint3
+IF~!AreaCheck("RTF006") ~THEN REPLY@3GOTO CollHint2
+END
+
+IF~~THEN BEGIN CollHint2
+SAY@12
+IF~~THEN REPLY@13EXIT
+END
+
+IF~~THEN BEGIN CollHint3
+SAY@14
+IF~~THEN REPLY@15GOTO CollHint4
+END
+
+IF~~THEN BEGIN CollHint4
+SAY@16
+IF~~THEN DO~SetGlobal("SanRTFPlot1","GLOBAL",6) SetGlobal("SanRTFColl","GLOBAL",2) EscapeArea()~EXIT
+END
+END

@@ -1,0 +1,188 @@
+BEGIN RTYouSha
+BEGIN RTMoninj
+BEGIN RTSharm
+
+IF~See([PC]) GlobalGT("SanRTFPlot4","GLOBAL",4)~THEN BEGIN Intru
+SAY@0
+IF~~THEN DO~Enemy()~ EXIT
+END
+
+IF~AreaCheck("RTF141") RandomNum(2,1)~THEN BEGIN Warn1
+SAY@1
+IF~~THEN EXIT
+END
+
+IF~AreaCheck("RTF141") RandomNum(2,2)~THEN BEGIN Warn1
+SAY@2
+IF~~THEN EXIT
+END
+
+IF~AreaCheck("RTF136") RandomNum(3,1)~THEN BEGIN Shamo1
+SAY@3
+IF~~THEN EXIT
+END
+
+IF~AreaCheck("RTF136") RandomNum(3,2)~THEN BEGIN Shamo2
+SAY@4
+IF~~THEN EXIT
+END
+
+IF~AreaCheck("RTF136") RandomNum(3,3)~THEN BEGIN Shamo3
+SAY@5
+IF~~THEN EXIT
+END
+
+BEGIN RT141DC
+IF~Global("Access","rtf141",1)~THEN BEGIN DownShar1
+SAY@6
+IF~~THEN REPLY@7GOTO DownShar2
+IF~~THEN REPLY@8GOTO DownShar2
+IF~PartyHasItem("RTSharSy")~THEN REPLY@9DO~SetGlobal("Access","rtf141",2)~GOTO DownShar3
+IF~~THEN REPLY@10EXIT
+END
+
+IF~~THEN BEGIN DownShar2
+SAY@11
+IF~DifficultyLT(HARD)~THEN DO~ApplyDamagePercent(Player1,70,MAGICFIRE)
+ApplySpell(Player1,CLERIC_HOLD_PERSON)~EXIT
+IF~DifficultyGT(NORMAL)~THEN DO~ApplyDamagePercent(Player1,49,MAGICFIRE)
+ApplySpell(Player1,CLERIC_HOLD_PERSON)~EXIT
+END
+
+IF~~THEN BEGIN DownShar3
+SAY@12
+IF~~THEN DO~AddexperienceParty(8700)~EXIT
+END
+
+
+CHAIN
+IF~AreaCheck("RTF130")~THEN RTYouSha Outs1
+@13
+==CVSan25J@14
+==RTYouSha@15
+==CVSan25J@16
+==RTYouSha@17
+=@18
+==CVSan25J@19
+==RTYouSha@20DO~EscapeArea()~EXIT
+
+CHAIN
+IF~AreaCheck("RTF139") Global("Shaheal","RTF139",0)~THEN RTYouSha Ins1
+@21
+DO~SetGlobal("Shaheal","RTF139",1)~
+==RTMoninj@22
+==CVSan25J@23
+==RTMoninj@22DO~ClearAllActions() StartCutSceneMode() StartCutScene("RTShaHe")~EXIT
+
+CHAIN
+IF~Global("Shaheal","RTF139",2)~THEN RTYouSha Ins2
+@24
+DO~SetGlobal("Shaheal","RTF139",3)~
+==RTMoninj@25
+==RTYouSha@26
+==RTMoninj@27
+==CVSan25J@28
+==RTMoninj@29
+==CVSan25J@30
+==RTYouSha@31
+==RTMoninj@32
+END
+++@33EXTERN RTMoninj Ins3
+++@34 EXTERN RTMoninj Ins3
+++@35 EXTERN RTMoninj Ins3
+
+CHAIN
+IF~~THEN RTMoninj Ins3
+@36
+=@37
+==CVSan25J@38
+==RTMoninj@39
+=@40
+==CVSan25J@41
+==RTMoninj@42
+==CVSan25J@43
+END
+++@44 EXTERN CVSan25J Ins4
+++@45 EXTERN CVSan25J Ins4
+
+CHAIN
+IF~~THEN CVSan25J Ins4
+@46
+=@47
+==RTYouSha@48DO~EscapeArea()~
+==RTMoninj@49DO~EscapeArea()~EXIT
+
+BEGIN RTWelo
+
+IF~RandomNum(5,1)~THEN BEGIN Welo1
+SAY@50
+IF~~THEN EXIT
+END
+
+IF~ RandomNum(5,2)~THEN BEGIN Welo2
+SAY@51
+IF~~THEN EXIT
+END
+
+IF~RandomNum(5,3)~THEN BEGIN Welo3
+SAY@52
+IF~~THEN EXIT
+END
+
+IF~RandomNum(5,4)~THEN BEGIN Welo4
+SAY@53
+IF~~THEN EXIT
+END
+
+IF~RandomNum(5,5)~THEN BEGIN Welo5
+SAY@54
+IF~~THEN EXIT
+END
+
+BEGIN RTWelo2
+IF~GlobalLT("SanRTFPlot4","GLOBAL",5)~THEN BEGIN Inn1
+SAY@55
+IF~~THEN REPLY@56GOTO Inn2
+IF~~THEN REPLY@57GOTO Inn3
+IF~~THEN REPLY@58EXIT
+END
+
+IF~~THEN BEGIN Inn2
+SAY@59
+IF~~THEN REPLY@60GOTO Inn4
+IF~~THEN REPLY@61GOTO Inn4
+END
+
+IF~~THEN BEGIN Inn3
+SAY@62
+IF~~THEN DO~StartStore("shop03",LastTalkedToBy(Myself))~EXIT
+END
+
+IF~~THEN BEGIN Inn4
+SAY@63
+IF~~THEN REPLY@64EXIT
+IF~~THEN REPLY@65EXIT
+IF~~THEN REPLY@66GOTO Inn3
+END
+
+BEGIN RTDamopr
+IF~See([PC]) GlobalGT("SanRTFPlot4","GLOBAL",4)~THEN BEGIN Intru
+SAY@67
+IF~~THEN DO~Enemy()~ EXIT
+END
+
+
+IF~AreaCheck("RTF141") RandomNum(3,1)~THEN BEGIN Warn3
+SAY@1
+IF~~THEN EXIT
+END
+
+IF~AreaCheck("RTF141") RandomNum(3,2)~THEN BEGIN Warn4
+SAY@2
+IF~~THEN EXIT
+END
+
+IF~AreaCheck("RTF141") RandomNum(3,3)~THEN BEGIN Warn5
+SAY@68
+IF~~THEN EXIT
+END

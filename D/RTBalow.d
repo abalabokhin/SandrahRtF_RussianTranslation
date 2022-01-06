@@ -1,0 +1,175 @@
+BEGIN RTBalow
+
+IF~AreaCheck("RTF077")Global("SanRTFPlot5","GLOBAL",4)~THEN BEGIN SeenTam
+SAY@0
+IF~~THEN REPLY@1EXIT
+IF~~THEN REPLY@2EXIT
+END
+
+IF~AreaCheck("RTF077")GlobalLT("SanRTFPlot5","GLOBAL",4)~THEN BEGIN CityExit1
+SAY@3
+IF~~THEN REPLY@4GOTO CityExit2
+IF~~THEN REPLY@5GOTO CityExit2
+END
+
+IF~~THEN BEGIN CityExit2
+SAY@6
+IF~~THEN REPLY@7EXIT
+END
+
+IF~Global("RTBalow","GLOBAL",2) !GlobalTimerExpired("RTWait","RTF048")~THEN BEGIN 48Wait
+SAY@8
+IF~~THEN EXIT
+END
+
+IF~Global("RTBalow","GLOBAL",2) GlobalTimerExpired("RTWait","RTF048")~THEN BEGIN 48Test1
+SAY@9
+IF~~THEN REPLY@10GOTO 48fight
+IF~PartyHasItem("Compon04")~THEN REPLY@11GOTO Test1
+IF~~THEN REPLY@12GOTO Test1b
+END
+
+IF~~THEN BEGIN 48fight
+SAY@13
+IF~~THEN DO~SetGlobal("RTBalow","GLOBAL",22) Enemy()~EXIT
+END
+
+IF~~THEN BEGIN Test1
+SAY@14
+IF~~THEN DO~IncrementGlobal("Balpoints","RTF048",1)~GOTO Test1b
+END
+
+IF~~THEN BEGIN Test1b
+SAY@15
+=@16
+IF~~THEN REPLY@17GOTO 1wrong
+IF~~THEN REPLY@18GOTO 1right
+IF~~THEN REPLY@19GOTO 1wrong
+IF~~THEN REPLY@20GOTO 1wrong
+END
+
+IF~~THEN BEGIN  1wrong
+SAY@21
+IF~~THEN GOTO Test2
+END
+
+IF~~THEN BEGIN  1right
+SAY@22
+IF~~THEN DO~IncrementGlobal("Balpoints","RTF048",1)~GOTO Test2
+END
+
+IF~~THEN BEGIN Test2
+SAY@23
+IF~~THEN REPLY@24GOTO 2wrong
+IF~~THEN REPLY@25GOTO 2wrong
+IF~~THEN REPLY@26DO~IncrementGlobal("Balpoints","RTF048",1)~GOTO 2right
+END
+
+IF~~THEN BEGIN 2wrong
+SAY@27
+IF~~THEN GOTO Test3
+END
+
+IF~~THEN BEGIN 2right
+SAY@28
+IF~~THEN GOTO Test3
+END
+
+IF~~THEN BEGIN Test3
+SAY@29
+IF~~THEN REPLY@30DO~IncrementGlobal("Balpoints","RTF048",1)~GOTO 3right
+IF~~THEN REPLY@31GOTO 3wrong
+IF~~THEN REPLY@32GOTO 3wrong
+IF~~THEN REPLY@33GOTO 3wrong
+END
+
+IF~~THEN BEGIN 3wrong
+SAY@34
+IF~~THEN GOTO Test4
+END
+
+IF~~THEN BEGIN 3right
+SAY@35
+IF~~THEN GOTO Test4
+END
+
+IF~~THEN BEGIN Test4
+SAY@36
+IF~GlobalLT("Balpoints","RTF048",3)~GOTO Test4a
+IF~GlobalGT("Balpoints","RTF048",2)~GOTO Test4b
+END
+
+IF ~~THEN BEGIN Test4a
+SAY@37
+IF~PartyHasItem("Compon04")~THEN GOTO Claw1
+IF~!PartyHasItem("Compon04")~THEN GOTO Claw12
+END
+
+IF~~THEN BEGIN Test4b
+SAY@38
+IF~PartyHasItem("Compon04")~THEN GOTO Claw1
+IF~!PartyHasItem("Compon04")~THEN GOTO Claw12
+END
+
+IF~~THEN BEGIN Claw12
+SAY@39
+IF~~THEN REPLY@40DO ~SetGlobal("RTBalow","GLOBAL",4)~EXIT
+IF~~THEN REPLY@41DO ~SetGlobal("RTBalow","GLOBAL",3)~EXIT
+END
+
+IF~Global("RTBalow","GLOBAL",3)~THEN BEGIN Travel
+SAY@42
+IF~~THEN GOTO Claw12
+END
+
+CHAIN
+IF~~THEN RTBalow Claw1
+@43
+==CVSan25J@44
+==RTBalow@45
+==CVSan25J@46
+==RTBalow@47
+==CVSan25J@48
+==RTBalow@49
+==CVSan25J@50DO~ActionOverride("CVSandr",ReallyForceSpell("RTBalow",CLERIC_HEAL))~
+==RTBalow@51
+=@39
+END
+IF~~THEN REPLY@40DO ~SetGlobal("RTBalow","GLOBAL",4)~EXIT
+IF~~THEN REPLY@41DO ~SetGlobal("RTBalow","GLOBAL",3)~EXIT
+
+
+CHAIN
+IF~Global("RTBalow","GLOBAL",1)~THEN RTBalow Smell1
+@52
+=@53
+DO~SetGlobal("RTBalow","GLOBAL",2) SetGlobalTimer("RTWait","RTF048",TWO_HOURS)~
+==CVSan25J@54
+==RTBalow@55
+==CVSan25J@56
+==RTBalow@57
+==CVSan25J@58
+==RTBalow@59
+==CVSan25J@60
+==RTBalow@61
+==CVSan25J@62
+==RTBalow@63
+==CVSan25J@64
+==RTBalow@65
+==CVSan25J@66
+==RTBalow@67
+==CVSan25J@68
+==RTBalow@69
+==CVSan25J@70
+==RTBalow@71EXIT
+
+CHAIN
+IF~Global("BalBridge","RTF048",5)~THEN RTBalow Trust
+@72
+DO~SetGlobal("BalBridge","RTF048",6)~
+==CVSan25J@73
+==RTBalow@74
+==CVSan25J@75
+==RTBalow@76
+==CVSan25J@77
+==RTBalow@78DO~EscapeArea()~EXIT

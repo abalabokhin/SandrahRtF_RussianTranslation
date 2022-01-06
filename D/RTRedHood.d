@@ -1,0 +1,85 @@
+BEGIN RTReHod3
+
+BEGIN RTReHod1
+IF~RandomNum(2,1)~THEN BEGIN Freefi1
+SAY@0
+IF~~THEN EXIT
+END
+
+IF~RandomNum(2,2)~THEN BEGIN Freefi2
+SAY@1
+IF~~THEN EXIT
+END
+
+BEGIN RTReHod2
+IF~RandomNum(2,1)~THEN BEGIN Freewi1
+SAY@0
+IF~~THEN EXIT
+END
+
+IF~RandomNum(2,2)~THEN BEGIN Freewi2
+SAY@2
+IF~~THEN EXIT
+END
+
+BEGIN RTSlav4
+IF~RandomNum(5,2)~THEN BEGIN Free1
+SAY@3
+IF~~THEN EXIT
+END
+
+IF~RandomNum(5,1)~THEN BEGIN Free2
+SAY@4
+IF~~THEN EXIT
+END
+
+IF~RandomNum(5,3)~THEN BEGIN Free3
+SAY@5
+IF~~THEN EXIT
+END
+
+IF~RandomNum(5,4)~THEN BEGIN Free4
+SAY@6
+IF~~THEN EXIT
+END
+
+IF~RandomNum(5,5)~THEN BEGIN Free5
+SAY@7
+IF~~THEN EXIT
+END
+
+BEGIN RTKniRed
+IF~RandomNum(2,1)~THEN BEGIN Freekn1
+SAY@6
+IF~~THEN EXIT
+END
+
+IF~RandomNum(2,2)~THEN BEGIN Freekn2
+SAY@1
+IF~~THEN EXIT
+END
+
+CHAIN
+IF WEIGHT #1~Global("StrangeVap","RTF080",3)~THEN RTReHod1 Foun1
+@8
+DO~SetGlobal("StrangeVap","RTF080",4)~
+==CVSan25J@9
+==RTReHod1 @10
+==CVSan25J@11
+==RTReHod1 @12
+=@13
+==CVSan25J@14
+==RTReHod1@15
+==CVSan25J@16
+==RTReHod1@17
+==CVSan25J@18EXIT
+
+CHAIN
+IF WEIGHT #1~AreaCheck("RTF081")Global("Welcome","RTF081",0)~THEN RTReHod3 Foun2
+@19
+DO~SetGlobal("Welcome","RTF081",1)~
+==CVSan25J@20
+==RTReHod3@21
+==CVSan25J@22EXIT
+
+

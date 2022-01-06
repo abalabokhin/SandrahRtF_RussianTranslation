@@ -1,0 +1,318 @@
+BEGIN RTMoun
+
+IF~GlobalLT("Guide","ar5500",4)~THEN BEGIN GuideI
+SAY@0
+IF~~THEN REPLY@1GOTO GuideII
+END
+
+IF~~THEN BEGIN GuideII
+SAY@2
+=@3
+=@4
+IF~~THEN REPLY@5 DO~SetGlobal("Guide","ar5500",6)TakePartyGold(10000)~ EXIT
+IF~~THEN REPLY@6EXIT
+END
+
+BEGIN RTCarba
+IF~Global("BanditEncounter","RTF027",1)~THEN BEGIN Meet
+SAY@7
+=@8
+IF~~THEN DO~SetGlobal("BanditEncounter","RTF027",2) Enemy()~EXIT
+END
+
+BEGIN RTMonkH
+
+CHAIN
+IF~!PartyHasItem("RTMoBad")Global("RTMons1","RTF040",3)~THEN RTMonkH NeedBadgeNun1
+@9
+==CVSan25J@10
+==RTMonkH@11
+END
+++@12+ BooksH
+++@13+RelictH
+IF ~InParty("Leyala")~THEN REPLY@14+ TeachH
+IF ~!InParty("Leyala")~THEN REPLY@15 + ChallH
+
+CHAIN
+IF~~THEN RTMonkH BooksH
+@16
+==CVSan25J@17
+==RTMonkH@18
+=@19DO~GiveItemCreate("RTMoBad",Player1,1,0,0) SetGlobal("RTMons1","RTF040",5)~ EXIT
+
+CHAIN
+IF~~THEN RTMonkH RelictH
+@20
+==CVSan25J@21
+==RTMonkH@22
+==CVSan25J@23
+==RTMonkH@24DO~GiveItemCreate("RTMoBad",Player1,1,0,0) SetGlobal("RTMons1","RTF040",5)~ EXIT
+
+CHAIN
+IF~~THEN RTMonkH TeachH
+@25
+=@26
+==CVLey25J@27
+==RTMonkH@28DO~GiveItemCreate("RTMoBad",Player1,1,0,0) SetGlobal("RTMons1","RTF040",5)~ EXIT
+
+CHAIN
+IF~~THEN RTMonkH ChallH
+@29 DO~SetGlobal("RTMons1","RTF040",4)~ EXIT
+
+CHAIN
+IF~!PartyHasItem("RTMoBad")Global("RTMons1","RTF040",4)~THEN RTMonkH NeedBadgeNun2
+@30EXIT
+
+CHAIN
+IF~Global("RTMons1","RTF040",7)~THEN RTMonkH Ship
+@31
+==CVSan25J@32
+==RTMonkH@33
+==CVSan25J@34
+END
+++@35DO~SetGlobal("RTMons1","RTF040",8)~EXIT
+++@36DO~SetGlobal("RTMons1","RTF040",8)~EXIT
+
+
+BEGIN RTMonk1
+
+IF~!PartyHasItem("RTMoBad")~THEN BEGIN NeedBadge
+SAY@37
+IF~~THEN REPLY@38GOTO Nun
+IF~~THEN REPLY@39 GOTO Books
+IF~~THEN REPLY@40 GOTO Nun
+END
+
+IF~~THEN BEGIN Nun
+SAY@41
+IF~~THEN EXIT
+END
+
+IF~~THEN BEGIN Books
+SAY@42
+IF~~THEN EXIT
+END
+
+IF~PartyHasItem("RTMoBad")~THEN BEGIN HasBadge
+SAY@43
+IF~~THEN DO~SetGlobal("RTMons1","RTF040",6)~EXIT
+END
+
+BEGIN RTMonk2
+IF~ Global("RTMons1","RTF040",3)~ THEN BEGIN HintNun
+SAY@44
+IF~~THEN REPLY@45GOTO HintNun2
+IF~~THEN REPLY@46 GOTO HintNun3
+END
+
+IF~~THEN BEGIN HintNun2
+SAY@47
+IF~~THEN REPLY@48 GOTO HintNun3
+END
+
+IF~~THEN BEGIN HintNun3
+SAY@49
+IF~~THEN EXIT
+END
+
+IF~Global("RTMons1","RTF040",4)~THEN BEGIN SellBadge
+SAY@50
+IF~~THEN REPLY@51GOTO SellBadge2
+END
+
+IF~~THEN BEGIN SellBadge2
+SAY@52
+=@53
+IF~~THEN REPLY@54 GOTO Br500
+IF~~THEN REPLY@55 GOTO Br1500
+IF~~THEN REPLY@56 GOTO Br0
+END
+
+IF~~THEN BEGIN Br500
+SAY@57
+IF~~THEN DO~GiveItemCreate("RTMoBad",Player1,1,0,0) SetGlobal("RTMons1","RTF040",5) TakePartyGold(500)~ EXIT
+END
+
+IF~~THEN BEGIN Br1500
+SAY@57
+IF~~THEN DO~GiveItemCreate("RTMoBad",Player1,1,0,0) SetGlobal("RTMons1","RTF040",5) TakePartyGold(1500)~ EXIT
+END
+
+IF~~THEN BEGIN Br0
+SAY@58
+IF~~THEN EXIT
+END
+
+IF~!Global("RTMons1","RTF040",3) !Global("RTMons1","RTF040",4)~ THEN BEGIN Peace
+SAY@59
+IF~!AreaCheck("RTF042")~THEN EXIT
+IF~AreaCheck("RTF042")~THEN REPLY @60GOTO insp
+END
+
+IF~~THEN BEGIN insp
+SAY@61
+IF~~THEN EXIT
+END
+
+BEGIN RTMonkBo
+
+IF~NumTimesTalkedTo(0)~ THEN BEGIN Pcinit
+SAY@62
+IF~~THEN EXTERN CVSan25J Theft3
+END
+
+IF~NumTimesTalkedToGT(0)~ THEN BEGIN Pcinit3
+SAY@63
+IF~~THEN EXIT
+END
+
+CHAIN
+IF~Global("RTMissBooks","LOCALS",1)~THEN CVSan25J Theft1
+@64
+DO~SetGlobal("RTMissBooks","LOCALS",2) ActionOverride("RTMonkbo",SetNumTimesTalkedTo(1))~
+==RTMonkBo@65
+=@66
+==CVSan25J@67
+==RTMonkBo@68
+==CVSan25J@69
+==RTMonkBo@70
+==CVSan25J@71
+==RTMonkBo@72EXIT
+
+CHAIN
+IF~~THEN CVSan25J Theft3
+@64
+DO~ActionOverride("CVSandr",SetGlobal("RTMissBooks","LOCALS",2))~
+==RTMonkBo@65
+=@66
+==CVSan25J@67
+==RTMonkBo@68
+==CVSan25J@69
+==RTMonkBo@70
+==CVSan25J@71
+==RTMonkBo@72EXIT
+
+CHAIN
+IF~Global("RTMissBooks","LOCALS",4)~THEN CVSan25J Theft2
+@73
+DO~SetGlobal("RTMissBooks","LOCALS",5)~
+==RTMonkBo@74
+==CVSan25J@75
+==RTMonkBo@76
+==CVSan25J@77
+==RTMonkBo@78
+==CVSan25J@79
+==RTMonkBo@80
+==CVSan25J@81
+END
+++@82DO~SetGlobal("SanRTFPlot2","GLOBAL",4) RevealAreaOnMap("RTF038") AddJournalEntry(@2057,QUEST)~EXIT
+
+BEGIN RTMonkSt
+
+CHAIN
+IF~Global("RTMons1","RTF043",1)~THEN RTMonkSt sacred
+@83
+DO~SetGlobal("RTMons1","RTF043",2)~
+==CVSan25J@84
+END
+++@85 EXIT
+++@86EXIT
+
+BEGIN RTIYLO
+
+IF~Global("RTMons1","RTF043",4)~THEN BEGIN Stayw
+SAY@87
+IF~~THEN EXIT
+END
+
+CHAIN
+IF~GlobalLT("RTMons1","RTF043",3)~THEN RTIYLO Access1
+@88
+==RTIYLO IF~GlobalGT("SanIylos","GLOBAL",1)~THEN@89
+==RTIYLO IF~InParty("LEYALA")~THEN@90
+==CVLey25J IF~InParty("LEYALA")~THEN@91
+==RTIYLO@92
+==CVSan25J@93
+==RTIYLO@94
+==CVSan25J@95
+=@96
+==RTIYLO@97
+==CVSan25J@98
+==RTIYLO@99
+==CVSan25J@100
+==CVSan25J@101
+==RTIYLO@102
+=@103
+==CVSan25J@104
+==RTIYLO@105
+=@106DO~SetGlobal("RTMons1","RTF043",3)~EXIT
+
+CHAIN
+IF WEIGHT #-1~Global("RTMons1","RTF040",7)~THEN RTMonk1 Ship1
+@31
+==CVSan25J@32
+==RTMonk1@33
+==CVSan25J@34
+END
+++@35DO~SetGlobal("RTMons1","RTF040",8)~EXIT
+++@36DO~SetGlobal("RTMons1","RTF040",8)~EXIT
+
+CHAIN
+IF WEIGHT #-1~Global("RTMons1","RTF040",7)~THEN RTMonk2 Ship2
+@31
+==CVSan25J@32
+==RTMonk1@33
+==CVSan25J@34
+END
+++@35DO~SetGlobal("RTMons1","RTF040",8)~EXIT
+++@36DO~SetGlobal("RTMons1","RTF040",8)~EXIT
+
+EXTEND_BOTTOM Ambar01 3
+IF~GlobalGT("SanRTFPlot2","GLOBAL",1) Global("RTAsk","LOCALS",0)~THEN REPLY@107GOTO Rave1
+END
+
+EXTEND_BOTTOM Ambar01 20
+IF~GlobalGT("SanRTFPlot2","GLOBAL",1) Global("RTAsk","LOCALS",0)~THEN REPLY@107GOTO Rave1
+END
+
+EXTEND_BOTTOM Ambar01 40
+IF~GlobalGT("SanRTFPlot2","GLOBAL",1) Global("RTAsk","LOCALS",0)~THEN REPLY@107GOTO Rave1
+END
+
+EXTEND_BOTTOM Ambar01 48
+IF~GlobalGT("SanRTFPlot2","GLOBAL",1) Global("RTAsk","LOCALS",0)~THEN REPLY@107GOTO Rave1
+END
+
+CHAIN
+IF~~THEN Ambar01 Rave1
+@108
+DO~SetGlobal("RTAsk","LOCALS",1)~
+==CVSan25J@109
+==Ambar01@110
+==CVSan25J@111
+==Ambar01@112
+==CVSan25J@113
+==Ambar01@114
+=@115EXIT
+
+CHAIN
+IF~Global("Guide","ar5500",2)~THEN CVLey25J GuideIth
+@116
+==CVSan25J@117
+==CVLey25J@118
+==CVSan25J@119
+END
+++@120DO~ SetGlobal("Guide","ar5500",3) ~EXIT
+++@121DO~SetGlobal("Guide","ar5500",6) ~EXIT
+
+CHAIN
+IF~Global("Narga","rtf045",2)~THEN CVNarga InRavencr1
+@122
+=@123
+DO~SetGlobal("Narga","rtf045",3)~
+==CVIzy25J IF~InParty("CVIzzy")~THEN@124
+==CVSan25J@125
+==CVNarga@126
+==CVSan25J@127
+==CVNarga@128
+=@129DO~ReallyForceSpell(Myself,DRYAD_TELEPORT)~EXIT

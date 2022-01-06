@@ -1,0 +1,114 @@
+BEGIN RTIzPlo1
+BEGIN RTSharl
+BEGIN CVIzy25J
+
+IF~Global("IzzyGods","LOCALS",1)~THEN BEGIN Advantage1
+SAY@0
+IF~~THEN REPLY@1GOTO Advantage2
+IF~~THEN REPLY@2 GOTO Advantage3
+END
+
+IF~~ THEN BEGIN Advantage2
+SAY@3
+IF~~THEN REPLY@4GOTO Advantage4
+END
+
+IF~~ THEN BEGIN Advantage3
+SAY@5
+IF~~THEN REPLY@4GOTO Advantage4
+END
+
+IF~~ THEN BEGIN Advantage4
+SAY@6
+IF~~THEN DO~SetGlobal("IzzyGods","LOCALS",2)~ EXIT
+END
+
+IF~Global("Izzyplot","GLOBAL",1)~THEN BEGIN IzPlotSt1
+SAY@7
+IF~~THEN REPLY@8GOTO IzPlotSt2
+IF~~THEN REPLY@9 GOTO IzPlotSt2
+IF~~THEN REPLY@10 GOTO IzPlotSt2
+END
+
+IF~~THEN BEGIN IzPlotSt2
+SAY@11
+=@12
+IF~~THEN REPLY@13 GOTO IzPlotSt3
+IF~~THEN REPLY@14 GOTO IzPlotSt3
+END
+
+IF~~THEN BEGIN IzPlotSt3
+SAY@15
+IF~~THEN REPLY@16GOTO IzPlotSt4
+END
+
+IF~~THEN BEGIN IzPlotSt4
+SAY@17
+IF~~THEN REPLY@18 GOTO IzPlotSt5
+IF~~THEN REPLY@19 GOTO IzPlotSt5
+END
+
+IF~~THEN BEGIN IzPlotSt5
+SAY@20
+=@21
+IF~~THEN REPLY@22DO~SetGlobal("Izzyplot","GLOBAL",2) AddJournalEntry(@2046,QUEST)~EXIT
+END
+
+IF~Global("Izzyplot","GLOBAL",5)~THEN BEGIN IzPlotSt6
+SAY@23
+IF~~THEN REPLY@24 GOTO IzPlotSt7
+IF~~THEN REPLY@25 GOTO IzPlotSt7
+END
+
+IF~~THEN BEGIN IzPlotSt7
+SAY@26
+IF~~THEN REPLY@27 GOTO IzPlotSt8
+END
+
+IF~~THEN BEGIN IzPlotSt8
+SAY@28
+IF~~THEN REPLY@29DO~SetGlobal("Izzyplot","GLOBAL",6) AddJournalEntry(@2048,QUEST)~EXIT
+END
+
+CHAIN
+IF~Global("Izzyplot","GLOBAL",7)~THEN RTSharl MetThay1
+@30
+DO~SetGlobal("Izzyplot","GLOBAL",8)~ 
+==CVIzy25J@31
+DO~AddXPObject("CVIzzy",26500) AddexperienceParty(10000) EraseJournalEntry(@2046)EraseJournalEntry(@2047) EraseJournalEntry(@2048) ~
+==RTSharl@32
+==CVIzy25J@33
+==RTSharl@34
+=@35
+=@36
+==CVIzy25J@37
+==CVSan25J@38
+==RTSharl@39DO~EscapeAreaMove("RTF098",718,470,3) ~EXIT
+
+
+CHAIN
+IF~Global("Izzyplot","GLOBAL",3)~THEN RTIzPlo1 GoneThay1
+@40
+DO~SetGlobal("Izzyplot","GLOBAL",4)~
+==CVIzy25J@41
+==RTIzPlo1@42
+==CVIzy25J@43
+==RTIzPlo1@44
+==CVIzy25J@45
+==RTIzPlo1@46
+==CVIzy25J@47
+==RTIzPlo1@48 DO~EscapeArea()~
+==CVIzy25J@49
+END
+++@50DO~AddJournalEntry(@2047,QUEST)~ EXIT
+
+CHAIN
+IF~AreaCheck("RTF098")~THEN RTSharl OutThay1
+@51
+==CVIzy25J@52
+==RTSharl @53
+==CVIzy25J@54
+==RTSharl @55
+==CVIzy25J@56EXIT
+
+

@@ -1,0 +1,105 @@
+CHAIN
+IF WEIGHT #-12~ GlobalGT("SanBeginRTF","GLOBAL",1) NumTimesTalkedTo(0)~THEN Botsmith RTF1
+@0
+==CVSan25J@1
+==Botsmith@2
+==CVSan25J@3
+==Botsmith@4
+==CVSan25J@5
+==Botsmith@6
+END
+++@7+ 4
+++@8EXIT
+
+APPEND WDWATCH
+IF WEIGHT #-1~ GlobalGT("SanBeginRTF","GLOBAL",1) AreaCheck("RTF006")Global("Watchcheck","RTF006",0)~THEN BEGIN Where
+SAY@9
+IF~~THEN REPLY@10GOTO Where1
+IF~~THEN REPLY@11GOTO Where1
+IF~~THEN REPLY@12GOTO Where2
+END
+
+IF~~THEN BEGIN Where1
+SAY@13
+IF~~THEN DO~SetGlobal("Watchcheck","RTF006",1)~EXIT
+END
+
+IF~~THEN BEGIN Where2
+SAY@14
+IF~~THEN DO~SetGlobal("Watchcheck","RTF006",1)~EXIT
+END
+END
+
+BEGIN RTPorley
+IF~True()~THEN BEGIN EMInn1
+SAY@15
+IF~~THEN REPLY@16GOTO EMInn2
+IF~~THEN REPLY@17GOTO EMInn3
+IF~~THEN REPLY@18GOTO EMInn4
+IF~~THEN REPLY@19GOTO EMInn5
+END
+
+IF~~THEN BEGIN EMInn2
+SAY@20
+IF~~THEN DO ~StartStore("RTEMart",LastTalkedToBy())~ EXIT
+END
+
+IF~~THEN BEGIN EMInn3
+SAY@21
+IF~~THEN EXIT
+END
+
+IF~~THEN BEGIN EMInn4
+SAY@22
+IF~~THEN EXIT
+END
+
+IF~~THEN BEGIN EMInn5
+SAY@23
+=@24
+IF~~THEN EXIT
+END
+
+CHAIN
+IF WEIGHT #-2~GlobalGT("SanBeginRTF","GLOBAL",1) AreaCheck("RTF030") Global("HeadIn","RTF030",0) ~THEN WDWatch Hint7
+@25
+DO~SetGlobal("HeadIn","RTF030",1) ~
+==CVSan25J@26EXIT
+
+BEGIN RTF7Monk
+CHAIN 
+IF~Global("Morc","RTF007",1)~THEN  RTF7Monk Dorc1
+@27
+DO~SetGlobal("Morc","RTF007",2)~
+==CVSan25J@28
+==RTF7Monk@29
+=@30
+==CVSan25J@31
+==RTF7Monk@32EXIT
+
+CHAIN
+IF~Global("Morc","RTF007",3)~THEN  RTF7Monk Dorc2
+@33
+DO~SetGlobal("Morc","RTF007",4)~
+==CVSan25J@34
+=@35
+=@36
+==RTF7Monk@37
+==CVSan25J@38
+==RTF7Monk@39
+==CVSan25J@40
+==RTF7Monk@41
+==CVSan25J@42
+==RTF7Monk@43EXIT
+
+CHAIN
+IF~Global("Morc","RTF007",4)~ THEN  RTF7Monk Shop
+@44
+END
+++@45+ Shop2
+++@46EXIT
+
+CHAIN
+IF~~ THEN  RTF7Monk Shop2
+@47
+DO~StartStore("ddtempl1",LastTalkedToBy(Myself)) ~EXIT

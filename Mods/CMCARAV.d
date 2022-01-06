@@ -1,0 +1,7 @@
+BEGIN ~CMCARAV~
+
+IF ~True() ~ THEN BEGIN talk
+SAY @0
+IF ~~ THEN DO ~
+~ EXIT
+END

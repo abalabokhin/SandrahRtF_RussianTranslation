@@ -1,0 +1,37 @@
+CHAIN
+IF WEIGHT #-2~GlobalGT("SanBeginRTF","GLOBAL",1) NumTimesTalkedTo(0)~THEN CVQIDR RTFUMMeet1
+@0
+==CVSan25J@0
+=@1
+==CVQIDR@2
+==CVSan25J@3
+==CVQIDR@4
+==CVSan25J@5
+==CVQIDR@6
+==CVSan25J@7
+==CVQIDR@8
+=@9
+=@10
+END
+++@11EXIT
+
+CHAIN
+IF~GlobalGT("RTLouPlot","GLOBAL",0) GlobalLT("RTLouPlot","GLOBAL",15) InParty("CVSandr")~THEN CVQIDR HelpUDDown
+@12
+==CVSan25J@13
+==CVQIDR@14
+END
+++@15+ EscUP
+
+CHAIN
+IF~~THEN  CVQIDR  EscUP
+@16
+DO~SetGlobal("RTLouPlot","GLOBAL",15) ~
+==CVSan25J@17
+==CVQIDR@18
+==CVSan25J@19
+==CVQIDR@20
+==CVSan25J@21
+==CVQIDR@22
+END
+++@23EXIT

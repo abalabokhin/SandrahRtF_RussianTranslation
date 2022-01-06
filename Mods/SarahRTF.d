@@ -1,0 +1,47 @@
+APPEND WENRIC
+
+IF WEIGHT #-4~GlobalGT("SanBeginRTF","GLOBAL",1) Global("Hint1","LOCALS",0) ~THEN BEGIN Hint1
+SAY@0
+=@1
+IF~~THEN REPLY@2DO~SetGlobal("Hint1","LOCALS",1)~EXIT
+IF~~THEN REPLY@3DO~SetGlobal("Hint1","LOCALS",1)~EXIT
+END
+END
+
+APPEND K#Sara25
+IF WEIGHT #-4~GlobalGT("SanBeginRTF","GLOBAL",1) Global("K#SarahHere","BG0401",1)~THEN BEGIN RTFStart
+SAY@4
+IF~~THEN REPLY@5 DO~SetGlobal("K#SarahHere","BG0401",2)~GOTO RTFStart2
+IF~~THEN REPLY@6 DO~SetGlobal("K#SarahHere","BG0401",2)~ EXIT
+END
+
+IF~~THEN BEGIN RTFStart2
+SAY@7
+IF~~THEN REPLY@8 EXIT
+IF~~THEN REPLY@9 GOTO Join1
+END
+
+IF~~THEN BEGIN Join1
+SAY@10
+IF~~THEN DO~SetGlobal("K#SarahJoined","LOCALS",1) JoinParty()~EXIT
+END
+END
+
+APPEND K#Sarah
+IF WEIGHT #-4~GlobalGT("SanBeginRTF","GLOBAL",1) Global("K#SarahHere","BG0401",1)~THEN BEGIN RTFStartn
+SAY@4
+IF~~THEN REPLY@5 DO~SetGlobal("K#SarahHere","BG0401",2)~GOTO RTFStartn2
+IF~~THEN REPLY@6 DO~SetGlobal("K#SarahHere","BG0401",2)~ EXIT
+END
+
+IF~~THEN BEGIN RTFStartn2
+SAY@7
+IF~~THEN REPLY@8 EXIT
+IF~~THEN REPLY@9 GOTO Joinn1
+END
+
+IF~~THEN BEGIN Joinn1
+SAY@10
+IF~~THEN DO~SetGlobal("K#SarahJoined","LOCALS",1) JoinParty()~EXIT
+END
+END

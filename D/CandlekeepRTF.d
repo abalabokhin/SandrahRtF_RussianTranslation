@@ -1,0 +1,115 @@
+EXTEND_BOTTOM Keeper 1
+IF~GlobalGT("SanBeginRTF","GLOBAL",1)~THEN REPLY@0GOTO RTFEntr
+END
+
+APPEND Keeper
+IF~~THEN BEGIN RTFEntr
+SAY@1
+IF~~THEN DO~
+SetGlobal("Criminal","GLOBAL",99)
+ClearAllActions()
+StartCutScene("Ch6cut01") ~EXIT
+END
+END
+
+APPEND Read3
+IF WEIGHT #-1~Global("Criminal","GLOBAL",99)~THEN BEGIN NoArrn
+SAY@2
+IF~~THEN REPLY@3 GOTO RTBookN
+IF~~THEN REPLY@4EXIT
+END
+
+IF~~THEN BEGIN  RTBookN
+SAY@5
+IF~~THEN EXIT
+END
+END
+
+APPEND Poghm10
+IF WEIGHT #-1~Global("Criminal","GLOBAL",99)~THEN BEGIN Babbl
+SAY@6
+IF~~THEN DO~EscapeArea()~EXIT
+END
+END
+
+APPEND Tethto2
+IF WEIGHT #-1~Global("Criminal","GLOBAL",99)~THEN BEGIN NoArrn
+SAY@2
+IF~~THEN REPLY@3 GOTO RTBookt
+IF~~THEN REPLY@4EXIT
+END
+
+IF~~THEN BEGIN  RTBookt
+SAY@7
+IF~~THEN DO~EscapeArea()~EXIT
+END
+END
+
+APPEND Ulraun
+IF WEIGHT #-1~Global("Criminal","GLOBAL",99)~THEN BEGIN NoArrn
+SAY@2
+IF~~THEN REPLY@3 GOTO RTBooku
+IF~~THEN REPLY@4EXIT
+END
+
+IF~~THEN BEGIN  RTBooku
+SAY@7
+IF~~THEN DO~EscapeArea()~EXIT
+END
+END
+
+APPEND Chante2
+IF WEIGHT #-1~Global("Criminal","GLOBAL",99)~THEN BEGIN Nochant
+SAY@8
+IF~~THEN DO~EscapeArea()~EXIT
+END
+END
+
+APPEND Watch6
+IF WEIGHT #-1~Global("Criminal","GLOBAL",99)~THEN BEGIN NoArr
+SAY@2
+IF~~THEN DO~EscapeArea()~EXIT
+END
+END
+
+EXTEND_BOTTOM Poghm7 0
+IF~Global("SanRTFPlot1","GLOBAL",8)~THEN REPLY@3 GOTO RTBook
+END
+
+APPEND  Poghm7
+IF~~THEN BEGIN RTBook
+SAY@9
+IF~~THEN EXIT
+END
+END
+
+BEGIN RTOutWa
+IF~ Global("Criminal","GLOBAL",99)~THEN BEGIN Leavecand
+SAY@10
+IF~~THEN REPLY@11EXIT
+IF~~THEN REPLY@12DO~ ClearAllActions()
+StartCutScene("RTCaOut") ~EXIT
+END
+
+BEGIN RTSarev
+
+CHAIN
+IF~Global("RTSarAmb","BG2610",1)~THEN RTSarev NewBoss
+@13
+DO~SetGlobal("RTSarAmb","BG2610",2)RealSetGlobalTimer("RTAmb","BG2610",30)~
+==CVSan25J@14
+==RTSarev@15
+==CVSan25J@16
+==RTSarev@17
+==CVSan25J@18
+==RTSarev@19
+==CVSan25J@20
+==RTSarev@21 DO~Enemy()~
+==CVSan25J@22 EXIT
+
+INTERJECT_COPY_TRANS Winthr2 7 RtWinSeeIzzy
+==BIzy25 IF~InParty("CVIzzy")~THEN@23
+==Winthr2 IF~InParty("CVIzzy")~THEN@24
+==BIzy25 IF~InParty("CVIzzy")~THEN@25
+==Winthr2 IF~InParty("CVIzzy")~THEN@26
+END
