@@ -1,6 +1,6 @@
-cmcarav.tra
-rtslgol.tra
-rolfrtf.tra
++ cmcarav.tra
++ rtslgol.tra
++ rolfrtf.tra + english
 rtgarric.tra
 rtfmurn.tra
 rtthiefguild.tra
