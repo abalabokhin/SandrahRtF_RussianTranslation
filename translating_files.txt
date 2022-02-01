@@ -1,7 +1,7 @@
 + cmcarav.tra
 + rtslgol.tra
 + rolfrtf.tra + english
-rtgarric.tra
++ rtgarric.tra
 rtfmurn.tra
 rtthiefguild.tra
 yasraum.tra
