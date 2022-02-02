@@ -8,7 +8,7 @@
 + solarrtf.tra
 + rtredwiz.tra
 + sarahrtf.tra + english
-imanel.tra
++ imanel.tra
 fencecolle.tra
 rtthlibr.tra
 chloertf.tra
