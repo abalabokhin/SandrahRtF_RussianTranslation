@@ -3,7 +3,7 @@
 + rolfrtf.tra + english
 + rtgarric.tra
 + rtfmurn.tra
-rtthiefguild.tra
++ rtthiefguild.tra
 yasraum.tra
 solarrtf.tra
 rtredwiz.tra
