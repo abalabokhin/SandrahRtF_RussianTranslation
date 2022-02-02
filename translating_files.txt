@@ -9,7 +9,7 @@
 + rtredwiz.tra
 + sarahrtf.tra + english
 + imanel.tra
-fencecolle.tra
++ fencecolle.tra
 rtthlibr.tra
 chloertf.tra
 spellplague.tra
