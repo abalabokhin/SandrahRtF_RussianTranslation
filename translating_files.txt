@@ -18,4 +18,4 @@ spellplague.tra
 	modified:   TRA/english/pellig3.tra
 	modified:   TRA/english/rtedwin.tra
 	modified:   TRA/russian/RTF-setup.tra
-
+	modified:   TRA/russian/rtcolan.tra
