@@ -7,7 +7,7 @@
 + yasraum.tra
 + solarrtf.tra
 + rtredwiz.tra
-sarahrtf.tra
++ sarahrtf.tra + english
 imanel.tra
 fencecolle.tra
 rtthlibr.tra
