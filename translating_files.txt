@@ -1,21 +1,10 @@
-+ cmcarav.tra
-+ rtslgol.tra
-+ rolfrtf.tra + english
-+ rtgarric.tra
-+ rtfmurn.tra
-+ rtthiefguild.tra
-+ yasraum.tra
-+ solarrtf.tra
-+ rtredwiz.tra
-+ sarahrtf.tra + english
-+ imanel.tra
-+ fencecolle.tra
-+ rtthlibr.tra
-+ chloertf.tra
-+ spellplague.tra + english
-
-	modified:   TRA/english/RTF-setup.tra
-	modified:   TRA/english/pellig3.tra
-	modified:   TRA/english/rtedwin.tra
-	modified:   TRA/russian/RTF-setup.tra
-	modified:   TRA/russian/rtcolan.tra
+rtbranw.tra
+giran25.tra
+rtiltash.tra
+rtdeher.tra
+rt38inn.tra
+cvley25j.tra
+rtbhaal.tra
+talosrtf.tra
+cvlou25j.tra
+orcbridge.tra
