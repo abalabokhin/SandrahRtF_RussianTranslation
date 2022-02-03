@@ -12,7 +12,7 @@
 + fencecolle.tra
 + rtthlibr.tra
 + chloertf.tra
-spellplague.tra
++ spellplague.tra + english
 
 	modified:   TRA/english/RTF-setup.tra
 	modified:   TRA/english/pellig3.tra
