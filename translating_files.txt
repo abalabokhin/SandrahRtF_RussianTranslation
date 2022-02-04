@@ -1,5 +1,5 @@
 + rtbranw.tra + english
-giran25.tra
++ giran25.tra + english
 rtiltash.tra
 rtdeher.tra
 rt38inn.tra
