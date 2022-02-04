@@ -2,7 +2,7 @@
 + giran25.tra + english
 + rtiltash.tra
 + rtdeher.tra + english
-rt38inn.tra
++ rt38inn.tra + english
 cvley25j.tra
 rtbhaal.tra
 talosrtf.tra
