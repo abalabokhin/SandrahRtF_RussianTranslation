@@ -1,25 +1,7 @@
-+ rtbranw.tra + english
-+ giran25.tra + english
-+ rtiltash.tra
-+ rtdeher.tra + english
-+ rt38inn.tra + english
-+ cvley25j.tra + english
-+ rtbhaal.tra
-+ talosrtf.tra
 cvlou25j.tra
 orcbridge.tra
-
-	modified:   rtgarric.tra
-	modified:   BezanturCity.tra
-	modified by p_zombie:   TRA/russian/rtgiranplot.tra
-	modified:   TRA/english/rtloufav.tra
-	modified:   TRA/russian/rtlarloch.tra
-	modified:   TRA/russian/rtloufav.tra
-
-	modified:   TRA/russian/BGir25.tra
-	modified:   TRA/russian/BLeya25.tra
-	modified:   TRA/russian/Bizy25.tra
-	modified:   TRA/russian/RTF-setup.tra
-	modified:   TRA/russian/San25J_RTF.tra
-	modified:   TRA/russian/rtgiranplot.tra
-
+rtcowl.tra
+undermountainrtf.tra
+rtredhood.tra
+volortf.tra
+rtsarles.tra
