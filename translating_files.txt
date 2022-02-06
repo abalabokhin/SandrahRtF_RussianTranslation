@@ -11,4 +11,5 @@ orcbridge.tra
 
 	modified:   rtgarric.tra
 	modified:   BezanturCity.tra
+	modified by p_zombie:   TRA/russian/rtgiranplot.tra
 
