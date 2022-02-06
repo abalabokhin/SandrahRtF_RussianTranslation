@@ -5,7 +5,7 @@
 + rt38inn.tra + english
 + cvley25j.tra + english
 + rtbhaal.tra
-talosrtf.tra
++ talosrtf.tra
 cvlou25j.tra
 orcbridge.tra
 
