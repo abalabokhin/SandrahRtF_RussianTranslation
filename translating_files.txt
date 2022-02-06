@@ -16,3 +16,10 @@ orcbridge.tra
 	modified:   TRA/russian/rtlarloch.tra
 	modified:   TRA/russian/rtloufav.tra
 
+	modified:   TRA/russian/BGir25.tra
+	modified:   TRA/russian/BLeya25.tra
+	modified:   TRA/russian/Bizy25.tra
+	modified:   TRA/russian/RTF-setup.tra
+	modified:   TRA/russian/San25J_RTF.tra
+	modified:   TRA/russian/rtgiranplot.tra
+
