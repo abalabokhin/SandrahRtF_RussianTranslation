@@ -12,4 +12,7 @@ orcbridge.tra
 	modified:   rtgarric.tra
 	modified:   BezanturCity.tra
 	modified by p_zombie:   TRA/russian/rtgiranplot.tra
+	modified:   TRA/english/rtloufav.tra
+	modified:   TRA/russian/rtlarloch.tra
+	modified:   TRA/russian/rtloufav.tra
 
