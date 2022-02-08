@@ -2,7 +2,7 @@
 + orcbridge.tra
 + rtcowl.tra
 + undermountainrtf.tra + english
-rtredhood.tra
+rtredhood.tra + english
 volortf.tra
 rtsarles.tra
 
@@ -12,5 +12,14 @@ modified:   TRA/russian/BLeya25.tra
 modified:   TRA/russian/Bizy25.tra
 modified:   TRA/russian/RTF-setup.tra
 modified:   TRA/russian/San25J_RTF.tra
-modified:   TRA/russian/San25J_RTF.tra
+	modified:   TRA/english/rtcolan.tra
+	modified:   TRA/russian/mystradrizrtf.tra
+	modified:   TRA/russian/rtbranw.tra
+	modified:   TRA/russian/rtcitadel.tra
+	modified:   TRA/russian/rtcolan.tra
+	modified:   TRA/russian/rtcyrend.tra
+	modified:   TRA/russian/rtedwin.tra
+	modified:   TRA/russian/rtlarloch.tra
+	modified:   TRA/russian/rtredhood.tra
+	modified:   TRA/russian/rtseamon.tra
 
