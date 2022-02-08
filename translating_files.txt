@@ -23,3 +23,8 @@ modified:   TRA/russian/San25J_RTF.tra
 	modified:   TRA/russian/rtredhood.tra
 	modified:   TRA/russian/rtseamon.tra
 
+	modified:   TRA/russian/rtcyrend.tra - by p_zombie
+	modified:   TRA/russian/rtgiranplot.tra - by p_zombie
+	modified:   TRA/russian/shaorcinrtf.tra - by p_zombie
+	modified:   TRA/russian/wheloon.tra - by p_zombie
+
