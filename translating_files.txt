@@ -2,7 +2,7 @@
 + orcbridge.tra
 + rtcowl.tra
 + undermountainrtf.tra + english
-rtredhood.tra + english
++ rtredhood.tra + english
 volortf.tra
 rtsarles.tra
 
