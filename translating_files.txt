@@ -1,7 +1,7 @@
 + cvlou25j.tra
 + orcbridge.tra
 + rtcowl.tra
-undermountainrtf.tra
++ undermountainrtf.tra + english
 rtredhood.tra
 volortf.tra
 rtsarles.tra
