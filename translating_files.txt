@@ -1,6 +1,6 @@
 + cvlou25j.tra
 + orcbridge.tra
-rtcowl.tra
++ rtcowl.tra
 undermountainrtf.tra
 rtredhood.tra
 volortf.tra
@@ -12,3 +12,5 @@ modified:   TRA/russian/BLeya25.tra
 modified:   TRA/russian/Bizy25.tra
 modified:   TRA/russian/RTF-setup.tra
 modified:   TRA/russian/San25J_RTF.tra
+modified:   TRA/russian/San25J_RTF.tra
+
