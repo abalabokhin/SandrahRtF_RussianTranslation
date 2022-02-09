@@ -3,7 +3,7 @@
 + rtcowl.tra
 + undermountainrtf.tra + english
 + rtredhood.tra + english
-volortf.tra + english
++ volortf.tra + english
 rtsarles.tra
 
 modified: rtbhaal.tra
