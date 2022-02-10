@@ -1,31 +1,7 @@
-+ cvlou25j.tra
-+ orcbridge.tra
-+ rtcowl.tra
-+ undermountainrtf.tra + english
-+ rtredhood.tra + english
-+ volortf.tra + english
-+ rtsarles.tra
+rtmysmes.tra
+cloakwood.tra
+rtnewgenp.tra
+ne_wdpeople.tra
+rtaerie.tra
 
-modified: rtbhaal.tra
-modified:   TRA/russian/BGir25.tra
-modified:   TRA/russian/BLeya25.tra
-modified:   TRA/russian/Bizy25.tra
-modified:   TRA/russian/RTF-setup.tra
-modified:   TRA/russian/San25J_RTF.tra
-	modified:   TRA/english/rtcolan.tra
-	modified:   TRA/russian/mystradrizrtf.tra
-	modified:   TRA/russian/rtbranw.tra
-	modified:   TRA/russian/rtcitadel.tra
-	modified:   TRA/russian/rtcolan.tra
-	modified:   TRA/russian/rtcyrend.tra
-	modified:   TRA/russian/rtedwin.tra
-	modified:   TRA/russian/rtlarloch.tra
-	modified:   TRA/russian/rtredhood.tra
-	modified:   TRA/russian/rtseamon.tra
-
-	modified:   TRA/russian/rtcyrend.tra - by p_zombie
-	modified:   TRA/russian/rtgiranplot.tra - by p_zombie
-	modified:   TRA/russian/shaorcinrtf.tra - by p_zombie
-	modified:   TRA/russian/wheloon.tra - by p_zombie
-
-
+modified by p_zombie: TRA/russian/blour25.tra
