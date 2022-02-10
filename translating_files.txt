@@ -1,5 +1,5 @@
-+ rtmysmes.tra + english
-cloakwood.tra
++ rtmysmes.tra + english 
++ cloakwood.tra
 rtnewgenp.tra
 ne_wdpeople.tra
 rtaerie.tra
