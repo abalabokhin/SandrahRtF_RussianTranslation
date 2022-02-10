@@ -1,7 +1,11 @@
-rtmysmes.tra
++ rtmysmes.tra + english
 cloakwood.tra
 rtnewgenp.tra
 ne_wdpeople.tra
 rtaerie.tra
 
 modified by p_zombie: TRA/russian/blour25.tra
+modified:   TRA/russian/BezanturCity.tra
+modified:   TRA/russian/RTF-setup.tra
+modified:   TRA/russian/rtmysmes.tra
+
