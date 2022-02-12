@@ -1,7 +1,7 @@
 + rtmysmes.tra + english 
 + cloakwood.tra
 + rtnewgenp.tra + english
-ne_wdpeople.tra
++ ne_wdpeople.tra + english
 rtaerie.tra
 
 modified by p_zombie: TRA/russian/blour25.tra
