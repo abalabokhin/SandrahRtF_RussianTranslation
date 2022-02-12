@@ -8,4 +8,4 @@ modified by p_zombie: TRA/russian/blour25.tra
 modified:   TRA/russian/BezanturCity.tra
 modified:   TRA/russian/RTF-setup.tra
 modified:   TRA/russian/rtmysmes.tra
-
+modified:   TRA/russian/San25J_RTF.tra
