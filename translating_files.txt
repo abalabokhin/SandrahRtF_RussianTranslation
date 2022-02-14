@@ -1,4 +1,4 @@
-wdtemplertf.tra 
+wdtemplertf.tra + english
 faenya.tra
 rtsamas.tra
 
