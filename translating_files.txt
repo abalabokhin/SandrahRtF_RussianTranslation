@@ -1,10 +1,2 @@
-+ wdtemplertf.tra + english
 faenya.tra
 rtsamas.tra
-
-	modified:   TRA/english/nextgennpcpids.tra
-	modified:   TRA/russian/cvizy25.tra
-	modified:   TRA/russian/cvizy25j.tra
-	modified:   TRA/russian/nextgennpcpids.tra
-	modified:   TRA/russian/rtsarles.tra
-
