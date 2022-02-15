@@ -1,1 +1,4 @@
 rtsamas.tra
+
+	modified:   TRA/russian/rtbalow.tra
+
