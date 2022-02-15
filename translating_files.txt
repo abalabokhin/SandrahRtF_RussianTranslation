@@ -1,2 +1,1 @@
-+ faenya.tra
 rtsamas.tra
